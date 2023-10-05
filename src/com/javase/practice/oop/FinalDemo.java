@@ -9,14 +9,17 @@ package com.javase.practice.oop;
  *    静态属性定义时不初始化，可在 静态代码块中初始化
  * 3。修饰方法。不可被重写
  * 4。修饰局部变量。值不可更改
- * final修饰的变量一般是常量，使用 XXX_XXX_XXX 命名
+ *
+ * 5。final修饰的变量一般是常量，使用 XXX_XXX_XXX 命名
+ *
  * @author:hjy
  * @date 2023/10/5 23:30
  */
 public class FinalDemo {
     public static void main(String[] args) {
-        A a = new A();
-        a.eat();
+//        A a = new A();
+//        a.eat();
+        System.out.println(A.str);
     }
 }
 
@@ -29,9 +32,10 @@ class A{
 //        VAL=2;
 //    }
 
-    final static int COUNT;
+    public static String str="hello";
+    public static final int count;
     static {
-        COUNT=1;
+        count=1;
     }
 
     public final void eat(){
